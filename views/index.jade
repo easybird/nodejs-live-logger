@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  div.header
+    p Waiting for new logs to appear...
+    div.loader
+  input(type="search",class="light-table-filter",data-table="filter-table",placeholder="Filter")
+  ul#logs.filter-table
+  script(src="/socket.io/socket.io.js")
+  script(src="/javascripts/main.js")
