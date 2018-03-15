@@ -12,4 +12,20 @@ router.post('/log', (req, res, next) => {
   res.end();
 })
 
+console.log('');
+console.log(`App is running on localhost:${process.env.PORT || '3000'}`);
+console.log('');
+console.log('-----------------------------------------------------------------');
+console.log('-----------------------------------------------------------------');
+console.log('1) Inspect logs');
+console.log(`Browse to http://localhost:${process.env.PORT || '3000'} and wait for new logging to appear`);
+
+console.log('-----------------------------------------------------------------');
+console.log('2) Add logging');
+console.log(`POST to http://localhost:${process.env.PORT || '3000'}/log to add new logging`);
+console.log('-----------------------------------------------------------------');
+console.log('-----------------------------------------------------------------');
+console.log('');
+console.log('');
+
 module.exports = router;
