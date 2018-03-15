@@ -26,10 +26,6 @@ The backend will be running on localhost:3000 by default.
 
 Browse to [localhost:3000](http://localhost:3000) to wait for new loggings to appear.
 
-```sh
-$ react-native-git-upgrade --npm
-```
-
 #### Trigger new logs
 
 Do a POST request to [localhost:3000](http://localhost:3000/log) with a JSON body included.
