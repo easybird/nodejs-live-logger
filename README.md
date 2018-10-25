@@ -28,5 +28,28 @@ Browse to [localhost:3000](http://localhost:3000) to wait for new loggings to ap
 
 #### Trigger new logs
 
-Do a POST request to [localhost:3000](http://localhost:3000/log) with a JSON body included.
+Do a POST request to [localhost:3000](http://localhost:3000/log) with a JSON body with properties `error` and `message` included.
 The logging should appear immediately in the browser window that is waiting for new logs (cfr above).
+
+__Using fetch:__
+
+```js
+(async () => {
+  await fetch('http://localhost:3000', {
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    method: "POST",
+    body: JSON.stringify({ error: "Some error", message: "Some message" })
+  })
+})();
+```
+
+__Using curl:__
+
+```console
+$ curl -X POST http://localhost:3000 \
+    -d "{ \"error\": \"Some error\", \"message\": \"Some message\" }" \
+    -H "Content-Type: application/json" -H "Accept: application/json"
+```
